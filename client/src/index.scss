@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+
+:root {
+  --primary-color: #3D7AD6;
+  --text-color: #fff;
+  --border-radius: 20px;
+  --button-color: #ffd414;
+  --shadow-color: #fbb500;
+  --border-color: #b58506;
+  --board-square-color: #ccfcfc;
+}
+
+$bgColor: var(--primary-color);
+$buttonColor: var(--button-color);
+$shadowColor: var(--shadow-color);
+$borderColor: var(--border-color);
+$boardSquareColor : var(--board-square-color);
+
+
+* {
+  font-family: 'Luckiest Guy', cursive;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-color);
+}
+
+.borderBottom {
+  border: none;
+  border-bottom: 1px solid white;
+  box-shadow: 0 10px 0 var(--shadow-color);
+  background-color: var(--button-color);
+  -webkit-text-stroke: 2px var(--border-color);
+  color: #fff;
+}
+
+.litleBottom {
+  background-color: var(--button-color);
+  width: 10%;
+  border-radius: 20px;
+  padding: 7px;
+}
+
+.onlyText {
+  color: #fff;
+  -webkit-text-stroke: 3px #000;
+  font-size: 25px;
+}
+
+.frame {
+  border: outset;
+  border: 5px #000 solid;
+  border-radius: 10px;
+  box-shadow: -10px 5px 0 0 #000;
+}
+
+.thinFrame {
+  border: outset;
+  border-top: 3px #000 solid;
+  border-bottom: 5px #000 solid;
+  border-right: 4px #000 solid;
+  border-left: 5px #000 solid;
+  border-radius: 10px;
+
+}
+
+.back {
+  @extend .litleBottom;
+  @extend .borderBottom;
+  margin: 20px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.yellow {
+  background-color: var(--button-color);
+  height: 80px;
+  box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30%;
+}
+
+.orangeUp {
+  background-color: var(--border-color);
+  height: 50px;
+  width: 100%;
+  rotate: 178deg;
+  position: absolute;
+
+}
+
+.orangeDown {
+  background-color: var(--border-color);
+  height: 50px;
+  width: 100%;
+  top: 90px;
+  rotate: 178deg;
+  position: absolute;
+
+}

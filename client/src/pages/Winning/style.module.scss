@@ -1,0 +1,38 @@
+@import '../../index.scss';
+
+.container{
+    @extend .onlyText;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.yellow{
+    display: flex;
+    gap: 2%;
+    font-size: 40px;
+}
+
+.board{
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20%;
+}
+
+.button {
+    @extend .borderBottom;
+    padding: 20px;
+    font-size: 40px;
+    border-radius: 50px;
+    width: 80%;
+}

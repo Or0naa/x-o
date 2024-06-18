@@ -1,0 +1,64 @@
+@import '../../index.scss';
+
+.header {
+    position: relative;
+    margin-top: 30%;
+}
+
+.menu {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    &>button {
+        padding: 10px;
+        border-radius: 50px;
+        width: 100%;
+        font-size: 45px;
+        @extend .borderBottom;
+    }
+}
+
+.button {
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+    @extend .litleBottom;
+    @extend .borderBottom;
+
+}
+
+.setDifficulty{
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   @extend .onlyText;
+
+    .not {
+        border-radius: 50px;
+        font-size: 20px;
+        padding: 7px;
+        @extend .borderBottom;
+        box-shadow: 0 7px 0 var(--shadow-color);
+
+    }
+}
+
+.difficulty{
+    border-radius: 50px;
+    font-size: 30px;
+    padding: 17px;
+    @extend .borderBottom;
+    box-shadow: 0 7px 0 var(--shadow-color);    
+
+}

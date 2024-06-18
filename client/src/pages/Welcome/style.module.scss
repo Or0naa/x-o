@@ -1,0 +1,39 @@
+.xUp {
+    position: absolute;
+    left: 17.78%;
+    top: 20.34%;
+    width: 18%;
+    filter: blur(5.5px);
+    transform: rotate(-21.26deg);
+}
+
+.oUp {
+    position: absolute;
+    left: 63.75%;
+    top: 20.34%;
+    width: 18%;
+    filter: blur(8.5px);
+    transform: rotate(6.85deg);
+}
+.xDown {
+    position: absolute;
+    left: 60.74%;
+    top: 60.41%;
+    width:45%;
+    filter: blur(18.5px);
+    transform: rotate(16.85deg);
+}
+.oDown {
+    position: absolute;
+    left: -5.66%;
+    top: 53.29%;
+    width: 35%;
+    filter: blur(11px);
+    transform: rotate(-12.56deg);
+}
+
+
+.welcome{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,60 @@
+@import '../../index.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    -webkit-text-stroke: 2px var(--border-color);
+    color: #fff;
+    font-size: 35px;
+}
+
+.image {
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.player {
+    display: flex;
+    font-size: 15px;
+    position: absolute;
+    top: 75px;
+ 
+
+
+    .wins {
+        background-color: #000;
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        padding: 5px 15px 5px 15px;
+        -webkit-text-stroke: 0px var(--border-color);
+        position: absolute;
+        top:13px;
+        left: -20px;
+        font-size: 20px;
+
+    }
+
+    &>img {
+        width: 60px;
+        position: absolute;
+        top:-5px;
+        right: 0px;
+        z-index: 3;
+
+    }
+    .name{
+        position: absolute;
+        top: 60px;
+        font-size: 35px;
+        right: -60px;
+    }
+}

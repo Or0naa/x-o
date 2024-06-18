@@ -1,0 +1,107 @@
+@import '../../index.scss';
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    @extend .onlyText;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    top: 5em;
+}
+
+.name {
+    @extend .frame;
+    margin-top: 3em;
+    background-color: #fff;
+    color: #acacac;
+    padding: 10px;
+    font-size: 60px;
+    letter-spacing: 20px;
+    width: 80%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &>input {
+        border: 0;
+        width: 100%;
+        font-size: 45px;
+        @extend .onlyText;
+
+    }
+}
+
+.title {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+}
+
+.avatar {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.avatars {
+    position: absolute;
+    display: flex;
+    width: 90%;
+    top: 57%;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 0.5em;
+    overflow-y: scroll;
+
+    &>img {
+        width: 160px;
+        border-radius: 50%;
+    }
+}
+
+.right {
+    position: absolute;
+    right: 2%;
+    top: 63%;
+    width: 40px;
+    filter: drop-shadow(3px 3px 4px var(--border-color));
+
+}
+
+
+.left {
+    position: absolute;
+    left: 2%;
+    top: 63%;
+    width: 40px;
+    filter: drop-shadow(-3px 3px 4px var(--border-color));
+}
+
+.v {
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    width: 18%;
+}
+
+.b {
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    width: 18%;
+
+}
