@@ -11,7 +11,8 @@ export default function Welcome() {
       <img className={style.xDown} src="./x.png" alt="x" />
       <img className={style.oUp} src="./o.png" alt="o" />
       <img className={style.oDown} src="./o.png" alt="o" />
-     <Logo/>
+      <div className={style.logo}> <Logo/></div>
+    
     </div>
   )
 }

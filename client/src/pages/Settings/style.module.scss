@@ -12,8 +12,10 @@
 }
 
 .logo {
-    position: relative;
-    top: 3em;
+    margin-top: 3rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
 }
 
 .name {
@@ -66,7 +68,7 @@
     left: 50%;
     transform: translateX(-50%);
     gap: 0.5em;
-    overflow-x:hidden;
+    overflow-x: hidden;
 
     &>img {
         width: 100px;
@@ -106,6 +108,7 @@
     width: 18%;
 
 }
+
 @media only screen and (min-width: 500px) {
     .container {
         gap: 2em;
@@ -113,15 +116,14 @@
     }
 
     .logo {
-        top: 0em;
-    }
+width: 20%;    }
 
     .name {
         margin-top: 2em;
         font-size: 50px;
         width: 60%;
         top: 20%;
-        
+
         &>input {
             font-size: 35px;
         }
@@ -141,26 +143,29 @@
         left: 50%;
         transform: translateX(-50%);
 
-        
+
         &>img {
             width: 120px;
         }
     }
 
-    .right, .left {
+    .right,
+    .left {
         top: 60%;
         width: 35px;
     }
 
-    .v, .b {
+    .v,
+    .b {
         top: 80%;
         width: 10%;
     }
+
     .v {
         left: 50%;
     }
-    
+
     .b {
-        left: 30%;    
+        left: 30%;
     }
 }

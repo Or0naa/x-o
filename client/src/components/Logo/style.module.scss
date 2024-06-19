@@ -1,7 +1,7 @@
 .logo {
     /* Logo */
 
-    position: absolute;
+    // position: absolute;
     width: 60%;
     left: 20%;
     top: 30%;
@@ -13,7 +13,7 @@
 
 .logoBG {
 
-    position: absolute;
+    // position: absolute;
     width: 60%;
     height: 20%;
     left: 20%;
@@ -24,19 +24,19 @@
 
 }
 
-@media only screen and (min-width: 500px) {
-    .logo {
-        width: 30%;
-        left: 35%;
-        top: 30%;
-        filter: drop-shadow(0 0 3rem #4abbfc);
-    }
+// @media only screen and (min-width: 500px) {
+//     .logo {
+//         width: 30%;
+//         left: 35%;
+//         top: 30%;
+//         filter: drop-shadow(0 0 3rem #4abbfc);
+//     }
 
-    .logoBG {
-        width: 40%;
-        height: 30%;
-        left: 30%;
-        top: 20%;
-        filter: blur(60px);
-    }
-}
+//     .logoBG {
+//         width: 40%;
+//         height: 30%;
+//         left: 30%;
+//         top: 20%;
+//         filter: blur(60px);
+//     }
+// }
