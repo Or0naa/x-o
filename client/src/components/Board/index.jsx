@@ -20,12 +20,17 @@ export default function Board() {
   };
 
   useEffect(() => {
-    if (game.type === "computer" && game.turn !== user.sign && game.winner==null) {
-      computerMove(game.board, game.players[1].sign, user.sign);
-      setGame({...game, turn: user.sign})
-    }
+    if (game.type === "computer" && game.turn !== user.sign && game.winner === null) {
+      const delay = 500; // משהה חצי שנייה (500 מילישניות)
   
-  }, [game]);
+      const makeComputerMove = () => {
+        computerMove(game.board, game.players[1].sign, user.sign);
+        setGame({ ...game, turn: user.sign });
+      };
+  
+      setTimeout(makeComputerMove, delay);
+    }
+  }, [game, user.sign]);
 
   const getCellContent = (value) => {
     if (value === "x") return <img src="./x.png" alt="X" />;

@@ -6,11 +6,10 @@ import { useGameStore } from "./store";
 export function computerMove(board, ai, human) {
     const updateGame = useGameStore.getState().updateGame;
     const game = useGameStore.getState().game;
-
+    game.count = game.count - 1
     let newBoard = {}
     let computerMove = computerWins(board, newBoard, ai, human);
     if (computerMove) {
-        console.log("computer win")
         updateGame(game, newBoard.i, newBoard.j, { sign: ai, name: "computer" })
         return;
     }

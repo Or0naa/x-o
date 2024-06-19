@@ -75,6 +75,7 @@ export const useGameStore = create((set, get) => ({
         });
     },
     updateGame: (data, i, j, player) => {
+        const user = useUserStore.getState().user
         if (i == -1 || j == -1) {
             const game = get().game
             const newGameState = { ...game, winner: "tie" }
@@ -93,13 +94,9 @@ export const useGameStore = create((set, get) => ({
 
             // Determine the next turn and other game updates
             const newTurn = data.turn === "x" ? "o" : "x";
-            const newCount = data.type =="computer"? data.count - 2: data.count-1;
-
+            const newCount = data.type=="computer" && player.sign!= user.sign? data.count: data.count-1;
             let newWinner = data.winner;
-            if (newCount <= 0) {
-                newWinner = "tie";
-                data.winner = "tie"
-            }
+         
             // Check for a winner (implement check function as needed)
             const winner = check(newBoard, player.sign, i, j);
             if (winner) {
@@ -124,6 +121,10 @@ export const useGameStore = create((set, get) => ({
                         newBoard[k][newBoard.length - k - 1].isWinner = true;
                     }
                 }
+            }
+            else if (newCount <= 0) {
+                newWinner = "tie";
+                data.winner = "tie"
             }
 
             const newGameState = {
