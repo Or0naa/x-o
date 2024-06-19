@@ -108,9 +108,9 @@ export const useGameStore = create((set, get) => ({
                     for (let k = 0; k < newBoard.length; k++) {
                         newBoard[k][j].isWinner = true;
                     }
-                } else if (winner === "column") {
+                } else if (winner === "colomn") {
                     for (let k = 0; k < newBoard.length; k++) {
-                        newBoard[j][k].isWinner = true;
+                        newBoard[i][k].isWinner = true;
                     }
                 } else if (winner === "diagonaldown") {
                     for (let k = 0; k < newBoard.length; k++) {
