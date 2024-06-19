@@ -37,3 +37,38 @@
     width: 100%;
     height: 100%;
 }
+
+/* התאמות למסך מחשב */
+@media only screen and (min-width: 500px) {
+    .xUp {
+        left: 15%;
+        top: 10%;
+        width: 10%;
+        filter: blur(3px);
+        transform: rotate(-20deg);
+    }
+
+    .oUp {
+        left: 70%;
+        top: 10%;
+        width: 10%;
+        filter: blur(5px);
+        transform: rotate(5deg);
+    }
+
+    .xDown {
+        left: 75%;
+        top: 65%;
+        width: 30%;
+        filter: blur(10px);
+        transform: rotate(15deg);
+    }
+
+    .oDown {
+        left: 0%;
+        top: 63%;
+        width: 25%;
+        filter: blur(8px);
+        transform: rotate(-10deg);
+    }
+}

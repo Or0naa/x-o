@@ -1,30 +1,54 @@
 @import '../../index.scss';
 
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
 
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
 .container {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 4em;
-    @extend .onlyText;
+    gap: 2em;
     font-size: 40px;
     justify-content: center;
     align-items: center;
+    @extend .onlyText;
+
 }
-
-
 
 .roomId {
     @extend .frame;
     margin-top: 3em;
     background-color: #fff;
-    color: #acacac;
     padding: 10px;
-    font-size: 60px;
+    color: #acacac;
     letter-spacing: 20px;
     width: 80%;
+    overflow: hidden; /* Ensures the text stays within the container */
+    position: relative;
+
 }
+
+.roomId span {
+    display: inline-block;
+    font-size:5vw;
+    letter-spacing: 0.5vw;
+    animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+    border-right: 2px solid orange;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-text-stroke: 1px #000;
+
+    width: 0; /* Initial width for the typing effect */
+}
+
 
 .title {
     position: absolute;

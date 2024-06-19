@@ -66,7 +66,7 @@ export default function Settings() {
       <div className={style.container}>
         <div className={style.title}>Your name</div>
         <div className={style.name}>
-          <input type="text" onChange={e => setName(e.target.value)} value={name} />
+          <input type="text" onChange={e => setName(e.target.value)} />
         </div>
         <div>
           <div className={style.avatar}>Choose avatar</div>

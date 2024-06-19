@@ -34,10 +34,11 @@ export default function Board() {
   };
 
   const getCellSize = () => {
+    const baseSize = window.innerWidth <= 600 ? 4.8 : 6; 
     switch (game.difficulty) {
-      case 3: return "8.5rem";
-      case 4: return "6.25rem";
-      default: return "4.9rem";
+      case 3: return `${baseSize}rem`;
+      case 4: return `${baseSize * 0.75}rem`;
+      default: return `${baseSize * 0.57}rem`;
     }
   };
 

@@ -15,7 +15,8 @@ const nav = useNavigate()
     return (
         <div className={style.container}>
             <div className={style.title}>Your code</div>
-            <div className={style.roomId}>{game.roomId}</div>
+            <div className={style.roomId}>{game.roomId? game.roomId : 
+                <span className={style.wait}>wait for code...</span>}</div>
             <div>
                 <svg role="img" aria-label="Mouth and eyes come from 9:00 and rotate clockwise into position, right eye blinks, then all parts rotate and merge into 3:00" className={style.smiley} viewBox="0 0 128 128">
                     <defs>

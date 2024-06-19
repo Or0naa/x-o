@@ -1,28 +1,28 @@
 @import '../../index.scss';
 
-.container{
+.container {
     @extend .onlyText;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    align-items: center;
 }
 
-.yellow{
+.yellow {
     display: flex;
     gap: 2%;
-    font-size: 40px;
+    font-size: 120%;
 }
 
-.board{
+.board {
     margin-top: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    width: fit-content;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +32,7 @@ footer{
 .button {
     @extend .borderBottom;
     padding: 20px;
-    font-size: 40px;
+    font-size: 35px;
     border-radius: 50px;
     width: 80%;
 }

@@ -1,64 +1,109 @@
 @import '../../index.scss';
 
 .header {
+    margin-top: 10%;
     position: relative;
-    margin-top: 30%;
 }
 
 .menu {
     position: absolute;
-    top: 30%;
-    left: 10%;
-    width: 80%;
+
     height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    top: 20%;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    gap: 20px;
 
     &>button {
-        padding: 10px;
         border-radius: 50px;
         width: 100%;
-        font-size: 45px;
         @extend .borderBottom;
+        padding: 15px;
+        font-size: 30px;
     }
 }
 
 .button {
     position: absolute;
-    bottom: 20%;
-    right: 20%;
     @extend .litleBottom;
     @extend .borderBottom;
+    bottom:5%;
+    right: 50%;
+    transform: translateX(50%);
 
 }
 
-.setDifficulty{
+.setDifficulty {
     position: absolute;
-    bottom: 20%;
-    left: 20%;
     display: flex;
     flex-direction: column;
+    @extend .onlyText;
+    bottom: 13%;
+    right: -15%;
     gap: 20px;
-   @extend .onlyText;
+    transform: translateX(-50%);
 
     .not {
         border-radius: 50px;
-        font-size: 20px;
-        padding: 7px;
         @extend .borderBottom;
         box-shadow: 0 7px 0 var(--shadow-color);
+        font-size: 18px;
+        padding: 10px;
 
     }
 }
 
-.difficulty{
+.difficulty {
     border-radius: 50px;
-    font-size: 30px;
-    padding: 17px;
+    font-size: 25px;
+    padding: 20px;
     @extend .borderBottom;
-    box-shadow: 0 7px 0 var(--shadow-color);    
+    box-shadow: 0 7px 0 var(--shadow-color);
 
+}
+
+
+@media only screen and (min-width: 500px) {
+    .header {
+        margin-top: 5%;
+        position: relative;
+    }
+    
+    .menu {
+        top: 20%;
+        left: 50%;
+        width: 50%;
+        transform: translateX(-50%);
+    }
+
+    .button{
+        width: 7%;
+    }
+        
+.setDifficulty {
+
+        right: 50%;
+        gap: 15px;
+        transform: translateX(50%);
+    
+        .not {
+          
+            padding: 10px;
+    
+        }
+    }
+    
+    .difficulty {
+        border-radius: 50px;
+        font-size: 25px;
+        padding: 20px;
+        @extend .borderBottom;
+        box-shadow: 0 7px 0 var(--shadow-color);
+    
+    }
 }

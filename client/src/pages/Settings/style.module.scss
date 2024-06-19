@@ -4,7 +4,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 4em;
+    gap: 2em;
     @extend .onlyText;
     font-size: 40px;
     justify-content: center;
@@ -13,7 +13,7 @@
 
 .logo {
     position: relative;
-    top: 5em;
+    top: 3em;
 }
 
 .name {
@@ -22,18 +22,18 @@
     background-color: #fff;
     color: #acacac;
     padding: 10px;
-    font-size: 60px;
+    font-size: 50px;
     letter-spacing: 20px;
     width: 80%;
     position: absolute;
-    top: 25%;
+    top: 23%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     &>input {
         border: 0;
         width: 100%;
-        font-size: 45px;
+        font-size: 40px;
         @extend .onlyText;
 
     }
@@ -41,6 +41,7 @@
 
 .title {
     position: absolute;
+    width: 70%;
     top: 33%;
     left: 50%;
     transform: translateX(-50%);
@@ -51,7 +52,7 @@
 .avatar {
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -61,14 +62,14 @@
     position: absolute;
     display: flex;
     width: 90%;
-    top: 57%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     gap: 0.5em;
-    overflow-y: scroll;
+    overflow-x:hidden;
 
     &>img {
-        width: 160px;
+        width: 100px;
         border-radius: 50%;
     }
 }
@@ -104,4 +105,62 @@
     left: 10%;
     width: 18%;
 
+}
+@media only screen and (min-width: 500px) {
+    .container {
+        gap: 2em;
+        font-size: 50px;
+    }
+
+    .logo {
+        top: 0em;
+    }
+
+    .name {
+        margin-top: 2em;
+        font-size: 50px;
+        width: 60%;
+        top: 20%;
+        
+        &>input {
+            font-size: 35px;
+        }
+    }
+
+    .title {
+        top: 23%;
+    }
+
+    .avatar {
+        top: 45%;
+    }
+
+    .avatars {
+        width: 70%;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        
+        &>img {
+            width: 120px;
+        }
+    }
+
+    .right, .left {
+        top: 60%;
+        width: 35px;
+    }
+
+    .v, .b {
+        top: 80%;
+        width: 10%;
+    }
+    .v {
+        left: 50%;
+    }
+    
+    .b {
+        left: 30%;    
+    }
 }
