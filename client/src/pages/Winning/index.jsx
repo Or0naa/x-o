@@ -10,7 +10,7 @@ export default function Winning() {
     const game = useGameStore(state => state.game);
     const setGame = useGameStore(state => state.setGame);
     const winner = game.players.find(player => player.name === game.winner);
-    const navigate = useNavigate(); // Initialize navigate function
+    const nav = useNavigate(); // Initialize navigate function
 
     const handlePlayAgain = () => {
         const playersToUpdate = game.players.map(player => {
@@ -31,7 +31,7 @@ export default function Winning() {
             };
             socket.emit('move', game.roomId, newGameState);
             setGame(newGameState);
-            navigate('/game');
+            nav('/game');
         } else {
             setGame({
                 ...game,
@@ -41,13 +41,13 @@ export default function Winning() {
                 board: game.board.map(row => row.map(cell => ({ value: "" }))), // Reset the board
                 turn: "x" // Reset the turn
             });
-            navigate('/game');
+            nav('/game');
         }
     };
 
     const handleRestart = () => {
         setGame("");
-        navigate('/menu');
+        nav('/menu');
     };
 
     useEffect(() => {
