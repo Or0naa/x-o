@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from './style.module.scss';
 import { useGameStore } from '../../store';
 import Board from '../../components/Board';
@@ -14,7 +14,7 @@ export default function Winning() {
 
     const handlePlayAgain = () => {
         const playersToUpdate = game.players.map(player => {
-            if (player.name === game.winner) {
+            if (player.name === game.winner && game.winner == UserActivation.name) {
                 player.wins = Number(player.wins) + 1;
             }
             return player;
@@ -27,7 +27,7 @@ export default function Winning() {
                 winner: null,
                 count: game.difficulty * game.difficulty,
                 board: game.board.map(row => row.map(cell => ({ value: "" }))), // Reset the board
-                turn: "X" // Reset the turn
+                turn: "x" // Reset the turn
             };
             socket.emit('move', game.roomId, newGameState);
             setGame(newGameState);
@@ -49,6 +49,12 @@ export default function Winning() {
         setGame("");
         navigate('/menu');
     };
+
+    useEffect(() => {
+        if (game.winner == null) {
+            nav('/game')
+        }
+    }, [game])
 
     return (
         <div className={style.container}>
