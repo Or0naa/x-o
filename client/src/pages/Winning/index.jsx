@@ -14,7 +14,7 @@ export default function Winning() {
 
     const handlePlayAgain = () => {
         const playersToUpdate = game.players.map(player => {
-            if (player.name === game.winner && game.winner == UserActivation.name) {
+            if (player.name === game.winner) {
                 player.wins = Number(player.wins) + 1;
             }
             return player;
